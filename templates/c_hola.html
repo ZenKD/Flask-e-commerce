@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>c_hola</title>
+</head>
+
+<body style="height: 96vh;">
+
+    <!-- Flash messages block -->
+    <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %} -->
+
+    <div >
+        <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: right">
+            <h1 style="text-align: center;  margin: 0px; justify-content: center;
+            align-items: center;"><strong>Welcome Customer</strong></h1><br>
+        
+            <a style="text-align: right;" href="/logout"><button style="height: 30px; width: 140px;">Logout</button></a>
+		</div>
+        <div class="body" style="height: 68vh">
+            <p><center>Hello {{name}} select what you want to do.</center></p> 
+            <center><a href="/products"><button style="width: 170px; height: 40px;">Browse Products</button></a> | <a href="/cart"><button style="width: 170px; height: 40px;">See your cart</button></a> | <a href="/order"><button style="width: 170px; height: 40px;">My Orders</button></a> | <a href="/addwallet"><button style="width: 170px; height: 40px;">Add Rs.100 to Wallet</button></a></center>
+            <P style="text-align: right;">Wallet amount={{wallet}}</P>
+        </div>
+        <div class="footer" style="height: 5vh; text-align: center;">
+            <p >Created by: Kamal Das</p>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Products</title>
+  <!-- Flash messages block -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+  {% endwith %}
+
+  <style>
+    .product-list {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+        list-style-type: none; /* Removes bullet points */
+        padding: 0; /* Removes default padding */
+    }
+    .product-item {
+        margin: 10px; /* Adjust spacing between products */
+        border: 1px solid #ccc; /* Optional: Adds a border around each product */
+        padding: 10px; /* Adds padding inside each product container */
+    }
+</style>
+</head>
+<body style="height: 96vh;">
+
+    
+
+  <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: right;">
+  <h1 style="text-align: center;">Our Products</h1>
+  <div style="display: flex;
+            justify-content: space-between;
+            align-items: center;">
+            <div style="text-align: left;"><a style="text-align: right;"href="/c_hola"><button style="height: 30px; width: 140px;">Home</button></a></div>
+            <div style="text-align: right"><a style="text-align: right;" href="/logout"><button style="height: 30px; width: 140px;">Logout</button></a></div>
+            </div>
+  </div>
+
+  <div class="body" style="height: 68vh">
+  <p style="text-align: center;">Hello! {{ name }} here are all the products.</p>
+  <div style="text-align: right;">
+  <a href="/cart"><button style="width: 170px; height: 40px;">See your cart</button></a>
+  </div>
+  {% if products %}
+    <ul class="product-list">
+      {% for product in products %}
+        <li class="product-item">
+          Product ID: {{ product[0] }}<br>
+          Name: {{ product[1] }}<br>
+          Description: {{ product[2] }}<br>
+          Price: {{ product[3] }}<br>
+          Quantity left: {{product[4]}}<br>
+          <form action="/add_to_cart" method="POST">
+            <input type="hidden" name="product_id" value="{{ product[0] }}">
+            <input type="submit" value="Add to Cart">
+          </form>
+
+            </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No products found.</p>
+  {% endif %}
+  </div>
+
+  <div class="footer" style="height: 5vh; text-align: center; padding-top: 1cm;">
+    <p >Created by: Kamal Das</p>
+  </div>
+
+</body>
+</html>

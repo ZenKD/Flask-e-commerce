@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>s_Hola!</title>
+        <!-- Flash messages block -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</head>
+<body style="height: 96vh;">
+    <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: center; ">
+        <h1>S_Welcome</h1>
+        <div style="text-align: right;">
+        <a style="text-align: right;">SupplierID :{{sID}} &nbsp; Name :{{name}}</a>
+        <a style="text-align: right;" href="/logout"><button style="height: 30px; width: 140px;">Logout</button></a>
+        </div>
+    </div>
+    
+    
+    
+    <p style="margin-bottom:20px;"></p>
+    <div class="body" style="height: 68vh;text-align: center;">
+    <center><p>Welcome supplier select what you want to do.</p></center>
+    <center><a href="/s_add_new_prod"><button style="height: 30px; width: 140px;">Add new product</button></a></center>
+    </div>
+
+    <div class="footer" style="height: auto; text-align: center; padding-top: 1cm;">
+        <p >Created by: Kamal Das</p>
+    </div>
+</body>
+</html>

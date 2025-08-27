@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+        <!-- Flash messages block -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</head>
+<body style="height: 96vh;">
+    <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: center; ">
+    <h1>Login</h1>
+    </div>
+
+    <div class="body" style="height: 68vh;text-align: center;padding-top: 2cm;">
+    <form method="POST" action="/login">
+        <input type="email" name="email" placeholder="Email" style="height: 0.5cm; width: 5cm;"><br>
+        <p></p>
+        <input type="password" name="password" placeholder="Password" style="height: 0.5cm; width: 5cm;"><br>
+        <p></p>
+        <button type="submit">Login</button>
+    </form>
+    </div>
+
+    <div class="footer" style="height: auto; text-align: center; padding-top: 1cm;">
+        <p >Created by: Kamal Das</p>
+    </div>
+
+</body>
+</html>

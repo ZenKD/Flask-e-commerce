@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>s_add_new_prod</title>
+</head>
+
+<body style="height: 96vh;">
+    <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: center; ">
+        <h1>ADD PRODUCT TO DATABASE</h1>
+        <div style="text-align: right;">
+        <a style="text-align: right;" href="/logout"><button style="height: 30px; width: 140px;">Logout</button></a>
+        </div>
+    </div> 
+    
+    <div class="body" style="height: 68vh;text-align: center;padding-top: 2cm;">
+    <form method="POST" action="/s_add_new_prod">
+        
+        <label for="product_id">Enter the product_id as an integer:</label>
+        <input type="number" name="product_id"><br>
+
+        <label for="name">Enter the name of the product:</label>
+        <input type="text" name="name"><br>
+
+        <label for="desc">Enter the product description:</label>
+        <input type="text" name="desc"><br>
+
+        <label for="price">Enter the price as an decimal:</label>
+        <input type="number" name="price" step="0.01"><br>
+
+        <label for="stock_quantity">Enter the product stock_quantity as an integer:</label>
+        <input type="number" name="stock_quantity"><br>
+        <p></p>
+        <button type="submit">Add the product</button> 
+    </form>
+    </div>
+
+    <div class="footer" style="height: auto; text-align: center; padding-top: 1cm;">
+        <p >Created by: Kamal Das</p>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplier Register</title>
+        <!-- Flash messages block -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</head>
+<body style="height: 96vh;">
+    <div class="header" style=" background-color: #81cc1b; padding: 5px; text-align: center; ">
+        <h1>Supplier Register</h1>
+    </div>
+
+    <div class="body" style="height: 68vh;text-align: center;padding-top: 1cm;">
+    <form method="POST" action="/s_register">
+        <input type="text" name="name" placeholder="Name"><br>
+        
+        <input type="tel" name="contact_info" placeholder="Contact_info"><br>
+        <p></p>
+        
+        <button type="submit">Register</button>
+    </form>
+    </div>
+
+    <div class="footer" style="height: auto; text-align: center; padding-top: 1cm;">
+        <p >Created by: Kamal Das</p>
+    </div>
+</body>
+</html>

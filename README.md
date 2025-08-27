@@ -33,17 +33,8 @@ This is a simple e-commerce web application built with Flask and MySQL.
     *   Create a database named `ecom`.
     *   Import the provided `.sql` file to set up the tables.
 
-5.  **Create a `.env` file** and add the following environment variables:
-    ```
-    SECRET_KEY='your_secret_key'
-    MYSQL_HOST='your_mysql_host'
-    MYSQL_USER='your_mysql_user'
-    MYSQL_PASSWORD='your_mysql_password'
-    MYSQL_DB='your_mysql_db'
-    MYSQL_PORT=your_mysql_port
-    ```
-
-6.  **Run the application:**
+5.  **Run the application:**
     ```bash
     flask run
+
     ```

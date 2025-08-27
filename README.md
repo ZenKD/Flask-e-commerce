@@ -38,3 +38,11 @@ This is a simple e-commerce web application built with Flask and MySQL.
     flask run
 
     ```
+
+
+
+
+    ## Project Context
+
+This was the first full-stack project I built. It was a great way to learn about database management systems (DBMS) concepts and to learn the fundamentals of the Flask web framework. It was a fantastic learning experience that solidified my skills in backend development and database interaction.
+

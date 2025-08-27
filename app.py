@@ -5,12 +5,12 @@ import bcrypt
 import pymysql
 app = Flask(__name__)
 
-# MySQL configuration
+# MySQL configuration replace the host,user,password,databse_name,port_no with your own
 app.config['SECRET_KEY'] = 'ysecret_key'
-app.config['MYSQL_HOST'] = '127.0.0.1'  # Replace with your MySQL host
-app.config['MYSQL_USER'] = 'root'  # Replace with your MySQL username
-app.config['MYSQL_PASSWORD'] = 'password'  # Replace with your MySQL password
-app.config['MYSQL_DB'] = 'ecom'  # Replace with your database name
+app.config['MYSQL_HOST'] = '127.0.0.1'  
+app.config['MYSQL_USER'] = 'root'  
+app.config['MYSQL_PASSWORD'] = 'password'  
+app.config['MYSQL_DB'] = 'ecom' 
 app.config['MYSQL_PORT'] = 3306
 
 connection = pymysql.connect(
@@ -476,4 +476,5 @@ def logout():
 
 
 if __name__ == '__main__':
+
     app.run(debug=True)
